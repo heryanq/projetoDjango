@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Today's Weather</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    </head>
+
+    <body>
+        <section class="hero is-fullheight">
+        <section class="hero is-primary has-background-white">
+
+            <div class="hero-head has-background-black">
+                <nav class="navbar">
+
+                    <div class="container">
+                        <div class="navbar-brand">
+                        <a class="navbar-item has-text-white">
+                                What's the weather today?
+                        </a>
+                        <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                        </div>
+
+                    <div id="navbarMenuHeroA" class="navbar-menu">
+                        <div class="navbar-end">
+                            <a href="{% url 'index'%}" class="navbar-item has-text-white">
+                                Home
+                            </a>
+                            <a href="{% url 'about'%}" class="navbar-item has-text-white">
+                                About
+                            </a>
+                            <a href="{% url 'contact'%}" class="navbar-item has-text-white">
+                                Contact
+                            </a>
+                            <span class="navbar-item">
+                                <a href="https://github.com/heryanq" target="_blank" rel="noopener" class="button is-primary is-inverted">
+                                    <span class="icon">
+                                    <i class="fab fa-github"></i>
+                                    </span>
+                                <span>My Github</span>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+        {% block content %}
+        {% endblock %}
+        
+        <div class="hero-foot has-background-black">
+            <p class="has-text-white has-text-centered">
+                Copyright © 2019 Heryan Queiroz
+            </p>
+        </div>
+    </section>
+   </body>
+
+</html>
+
